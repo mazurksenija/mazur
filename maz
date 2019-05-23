@@ -1,0 +1,41 @@
+ #include <stdio.h>
+   #include <conio.h>
+
+   #include <locale.h>
+void Vivod(int Ves,int Ras)
+{
+   int Sum;int Str; int Car=0;
+   if ((Ves<50) || (Ras>4000)|| (Ves>300)) {  printf("Your order is not accepted\n");  }
+  else {  Sum = 2*Ras;
+		 Str=(Sum*5)/100;
+		  if(Ves%20!=0) {Car=Car+1;}
+		 Car=Car+Ves/20;
+		   printf("Your order is accepted!Amount of cars:%d\nTotal shipping cost:%d$ (of which %d$ is insurance)\n",Car,Sum+Str,Str);
+		 }
+
+}
+
+
+int main()
+{
+	  int Ves;
+	  int Ras;
+	  int x;
+
+	  while(1)
+   {
+		printf("Press\n1-To make a order\n2-Exit\n3-About a program\n");
+		scanf("%d",&x);
+
+		if(x>3) {  printf("Wrong option!");   }
+		if (x== 1) {printf("Input weight(in tonnes):");
+		scanf("%d",&Ves);
+		printf("Input distance(in km):");
+		scanf("%d",&Ras); Vivod(Ves,Ras); }
+		if(x== 2) {  break;  }
+		if(x== 3)  {    printf("EurotransGroup v.1.0\nCopyright (c) Mazur Ksenija,2019\n");  }
+   }
+
+	return 0;
+
+}
